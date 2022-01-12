@@ -36,8 +36,16 @@ hr{
     justify-content: space-between;
     align-items: center;
 }
+.logo-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
 .header-container .logo img{
     width: 40px;
+    margin-right: 5px;
 }
 .navbar ul{
     display: flex;
@@ -49,6 +57,13 @@ hr{
     margin-right: 36px;
     border-bottom: 3px solid #562EFF;
     transition: .5s all ease;
+}
+.navbar ul .last-child{
+    margin-right: 0;
+}
+.last-child img{
+    position: relative;
+    top: 4px;
 }
 .navbar ul li a{
     text-decoration: none;
@@ -71,11 +86,13 @@ hr{
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 30px;
+    grid-gap: 30px;
 }
 .player{
     display: flex;
     align-items: center;
+    box-shadow: .1px .1px 10px #00000015;
+    border-radius: 5px;
 }
 .player img{
     width: 56px;
@@ -89,11 +106,13 @@ hr{
 .blogs{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 26px;
+    grid-gap: 26px;
 }
 .blog{
     display: flex;
-
+    align-items: center;
+    box-shadow: .1px .1px 10px #00000015;
+    border-radius: 10px;
 }
 .blog .thumbnail img{
     width: 177px;
@@ -118,12 +137,12 @@ hr{
 .courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
+    grid-gap: 24px;
 }
 .course{
     border-radius: 10px;
     padding: 14px;
-    box-shadow: .1px .1px 5px #00000015;
+    box-shadow: .1px .1px 10px #00000015;
 }
 .course .course-banner img{
     width: 224px;
@@ -143,19 +162,49 @@ hr{
 .fa-star.empty{
     color: #AEAEAE;
 }
-footer{
+.course-info .course-duration{
+    background-color: #FFE4E8;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+#footer{
     background-color: black;
     padding: 10px 0;
-    text-align: center;
-    color: #fff;
+    display: flex;
+    justify-content: center;
 }
-footer p a{
+#footer .footer-container{
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-part1 img{
+    width: 40px;
+}
+.footer-part2{
+    color: #fff;
+    font-size: 16px;
+}
+.footer-part2 a{
    text-decoration: none; 
    color: #562EFF;
    transition: .5s all ease;
 }
-footer p a:hover{
+.footer-part2  a:hover{
     color: #ffffff;
+}
+.social-icon a{
+    text-decoration: none;
+    color: #fff;
+    transition: .4s all ease;
+}
+.social-icon a:hover{
+    color: #562EFF;
+}
+.social-icon .fab{
+    font-size: 24px;
+    margin-right: 5px;
 }
 /* --------------------
     Media Queries
@@ -165,11 +214,18 @@ footer p a:hover{
         width: 100%;
         padding: 30px 0;
     }
+    .header-container{
+        padding: 0 2%;
+    }
+    .navbar ul li{
+        margin-right: 5px;
+    }
     .section-title{
         text-align: center;
     }
     .players, .blogs, .courses{
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
     }
     .player, .blog{
         flex-direction: column;
@@ -180,13 +236,32 @@ footer p a:hover{
         flex-direction: column;
         align-items: center;
     }
-    
+    #footer .footer-container{
+        padding: 0 2%;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-part1{
+       display: none;
+    }
+    .footer-part2{
+        text-align: center;
+    }
+    .footer-part3{
+        display: none;
+    }
 }
 /* tablet devices */
 @media only screen and (min-width: 689px) and (max-width: 992px){
     .container{
         width: 100%;
         padding: 30px 0;
+    }
+    .header-container{
+        padding: 0 2%;
+    }
+    .navbar ul li{
+        margin-right: 16px;
     }
     .section-title{
         text-align: center;
@@ -198,14 +273,29 @@ footer p a:hover{
     .players{
         grid-gap: 20px;
     }
-    .blogs{
-        grid-template-columns: repeat(1, 1fr);
+    .player{
+        padding: 0 20px;
     }
     .blog{
         flex-direction: column;
         align-items: center;
     }
+    .blog .thumbnail img{
+        width: 250px;
+        height: auto;
+    }
+    .course .course-banner img{
+        width: 100%;
+        height: auto;
+    }
+    .blogs, .courses{
+        padding: 0 20px;
+    }
     .players, .courses{
         grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .footer-container{
+        padding: 0 20px;
     }
 }

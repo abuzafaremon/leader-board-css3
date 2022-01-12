@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@500&display=swap');
 /* common styling */
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
 }
@@ -20,6 +22,40 @@ main{
 hr{
     border: 1px solid #D1D1D1;
     margin-bottom: 27px;
+}
+/* header styling */
+#header{
+    background-color: #562EFF;
+    display: flex;
+    justify-content: center;
+}
+.header-container{
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container .logo img{
+    width: 40px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    margin-right: 36px;
+    border-bottom: 3px solid #562EFF;
+    transition: .5s all ease;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.navbar ul li:hover{
+    border-bottom: 3px solid #fff;
 }
 /* top players styleing */
 .top-players{
@@ -104,6 +140,20 @@ hr{
 }
 .fa-star.empty{
     color: #AEAEAE;
+}
+footer{
+    background-color: black;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+footer p a{
+   text-decoration: none; 
+   color: #562EFF;
+   transition: .5s all ease;
+}
+footer p a:hover{
+    color: #ffffff;
 }
 /* --------------------
     Media Queries

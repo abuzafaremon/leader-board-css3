@@ -28,6 +28,7 @@ hr{
     background-color: #562EFF;
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 .header-container{
     width: 860px;
@@ -41,6 +42,7 @@ hr{
 .navbar ul{
     display: flex;
     align-items: center;
+    margin: 0;
 }
 .navbar ul li{
     list-style: none;
@@ -143,7 +145,7 @@ hr{
 }
 footer{
     background-color: black;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     color: #fff;
 }
